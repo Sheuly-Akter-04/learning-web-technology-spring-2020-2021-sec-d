@@ -1,61 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <style>
-        body
-        {
-            background: lightgray;
-        }
-        form
-        {
-            width: 50%;
-            margin: auto;
-            padding: 50px;
-        }
-        .forgetpass label
-        {
-            width: 120px;
-            display: inline-block;
-            text-align: left;
-            margin: 3px;
-        }
-        input[type="text"]
-        {
-            overflow: hidden;
-            font-size: 15px;
-            padding: 5px 0;
-            border: none;
-            outline: none;
-            background: none;
-            color:black;
-            border-bottom: 1px solid black;
-        }
-        input[type="password"]
-        {
-            overflow: hidden;
-            font-size: 15px;
-            padding: 5px 0;
-            border: none;
-            outline: none;
-            background: none;
-            color:black;
-            border-bottom: 1px solid black;
-        }
-        input[type="submit"]
-        {
-            width: 100px ;
-            background: none;
-            border: 2px solid grey;
-            padding: 5px;cursor: pointer;
-        }
-        .button:hover 
-        {
-            border: 2px solid black ;
-        }
-     
-    </style>
 
-    <body>
-    <?php include('Header.php');?>
+<html>
+
+
+<body>
+<table border="3" align="center" width=65%;">
+<tr>
+<td align="right">
+     <img src="logo.png" align="left" height="50" width="250" border="1"> 
+
+<a href="">Home</a>
+<a href="">Login</a>
+<a href="">Registration</a>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+<?php include('Header.php');?>
     <form id="forgetpass" method="get" action="ForgotPassword.php">
             <fieldset style="border: black 2px solid;">
                 <legend><b>FORGET PASSWORD</b></legend>
@@ -70,5 +31,33 @@
             </fieldset>
         </form>
     <?php include('Footer.php');?>
-    </body>
+
+
+</td>
+</tr>
+<tr>
+<td>
+<p>Copyright &#169; 2027</p>
+</td>
+</tr>
+</body>
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

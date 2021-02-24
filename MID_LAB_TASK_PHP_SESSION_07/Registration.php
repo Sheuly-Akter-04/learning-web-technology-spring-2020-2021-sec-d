@@ -1,156 +1,178 @@
-<!DOCTYPE html>
 <html>
-    <style>
-        body
-        {
-            background: lightgray;
-        } 
-        form
-        {
-            width: 50%;
-            margin: auto;
-        }
-        div.registration
-        {
-            font-weight: Bold;
-        }
-        .registration label
-        {
-            width: 120px;
-            display: inline-block;
-            text-align: left;
-            margin: 3px;
-        }
-        input[type="text"]
-        {
-            overflow: hidden;
-            font-size: 15px;
-            padding: 5px 0;
-            border: none;
-            outline: none;
-            background: none;
-            color:black;
-            border-bottom: 1px solid black;
-        }
-        input[type="password"]
-        {
-            overflow: hidden;
-            font-size: 15px;
-            padding: 5px 0;
-            border: none;
-            outline: none;
-            background: none;
-            color:black;
-            border-bottom: 1px solid black;
-        }
-        input[type="submit"]
-        {
-            width: 100px ;
-            background: none;
-            border: 2px solid grey;
-            padding: 5px;cursor: pointer;
-        }
-        input[type="reset"]
-        {
-            width: 100px ;
-            background: none;
-            border: 2px solid grey;
-            padding: 5px;cursor: pointer;
-        }
-        div.date
-        {
-            text-align: center;
-            float: left;
-            margin: 2px;
-        }
-        div.month
-        {
-            text-align: center;
-            float: left;
-            margin: 2px;
-        }
-        div.year
-        {
-            text-align: center;
-            float: left;
-            margin: 2px;
-        }
-        .button:hover 
-        {
-            border: 2px solid black ;
-        }
-    </style>
-    <body>
-    <?php include('Header.php');?>
-        <form id="registration" method="POST" action="db.php">
-            
-        <fieldset style="border: black 2px solid;">
-                <legend><b>REGISTRATION</b></legend>
-                
-                <div class="registration" method="POST" action="">
 
-                <label for="name">Name</label>
-                : <input type="text" id="name" name="name" size="55px" placeholder="name*" required><br>
-                
-                <label for="email">Email</label>
-                : <input type="text" id="email" name="email" size="55px" placeholder="email*" required><br>
-                
-                <label for="uname">User name:</label>
-                : <input type="text" id="uname" name="uname" size="55px" placeholder="user name*" required><br>
-                
-                <label for="password">Password:</label>
-                : <input type="password" id="password" name="password" size="55px" placeholder="password*" required><br>
-                
-                <label for="cpassword">Confirm Pasword:</label>
-                : <input type="password" id="cpassword" name="cpassword" size="55px" placeholder="confirm password*" required><br>
-            
-                <div class="gernder">
-                
-                <fieldset style="border: black 2px solid;">
-                <legend><b>GENDER</b></legend>
-                
-                <input type="radio" name="gender" value="Male">
-                <span class="radiobtn"></span>
-                <label class="male"><b>Male</b></label>
 
-                <input type="radio" name="gender" value="Female">
-                <span class="radiobtn"></span>
-                <label class="female">Female</label>
+<body>
+<table border="3" align="center" width=65%;">
+<tr>
+<td align="right">
+     <img src="logo.png" align="left" height="50" width="250" border="1"> 
 
-                <input type="radio" name="gender" value="Other">
-                <span class="radiobtn"></span>
-                <label class="other">Other</label>
+<a href="">Home |</a>
+<a href="">Login |</a>
+<a href="">Registration</a>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+<br>
+<form align="center" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<fieldset>
 
-                </fieldset>
-                </div>
+    <legend style="font-family: Arial, Helvetica, sans-serif;"><b>Registration</b></legend>
 
-                <div class="dob">
-                <fieldset style="border: black 2px solid;">
-                <legend><b>DATE OF BIRTH</b></legend>
-                
-                <div class ="date">
-                    <input type="text" id="date" name="dob" value="date" placeholder="date" style="text-align: center;" size="5"> / 
-                </div>
+    <div class="pp1">
 
-                <div class="month">
-                    <input type="text" id="month" name="dob" value="mmoth" placeholder="month" style="text-align: center;" size="5"> /
-                </div>
+    <label>Name : </label>
+    <input type="text" id="name" name="name" ><br>
+    <hr><br>
 
-                <div class="year">
-                    <input type="text" id="year" name="dob" value="year" placeholder="year" style="text-align: center;" size="6">
-                </div>
-                
-                <pre> <i>(dd/mm/yyyy)</i></pre>
+    <label>Email :</label>
+    <input type="text" id="email" name="email" ><br>
+    <hr><br>
 
-                </fieldset>
-                </div><br>
-                <input class="button" type="submit" value="Submit" name="submit">
-                <input class="button" type="reset" value="Reset Form" name="reset">
-            </div>
+    <label>User Name : </label>
+    <input type="text" id="uname" name="uname" ><br>
+    <hr><br>
 
-            </fieldset>
-        </form>
-    <?php include('Footer.php');?>
+    <label>Password :  </label>
+    <input type="password" id="pword" name="pword" ><br>
+    <hr><br>
+
+    <label>Confirm Password : </label>
+    <input type="password" id="conpword" name="conpword" ><br>
+    <hr><br>
+
+    </div>
+
+    <fieldset>
+
+    <legend style="font-family: Arial, Helvetica, sans-serif;">Gender</legend>
+
+    <div class="pp2">
+
+    <input type="radio" name="gender" value="Male">
+    <label class="male">Male</label>
+
+    <input type="radio" name="gender" value="Female">
+    <label class="female">Female</label>
+
+    <input type="radio" name="gender" value="Other">
+    <label class="other">Other</label>
+
+    </fieldset>
+
+    <hr>
+
+    </div>
+
+
+<div class="pp3">
+
+<fieldset>
+
+<legend style="font-family: Arial, Helvetica, sans-serif;">Date Of Birth</legend>
+
+<div class="pp2">
+
+<input type="text" id="date" name="date" size="5"> /
+<input type="text" id="month" name="month" size="5"> /
+<input type="text" id="year" name="year" size="6"><i> (dd/mm/yyyy)</i>
+
+
+</fieldset>
+
+
+</div>
+
+
+    <hr>
+
+    <input type="submit" name="submit" id="submit" value="Submit">
     
-    </body>
+    <input type="reset" name="reset" id="reset" value="Reset"><br><br>
+</fieldset>
+</form>
+
+<?php
+   if ($_SERVER["REQUEST_METHOD"] == "POST") 
+   {
+     if(isset($_POST['submit']))
+       {
+           $name = $_POST['name'];
+           $email = $_POST['email'];
+           $uname = $_POST['uname'];
+           $pword = $_POST['pword'];
+           $conpword = $_POST['conpword'];
+           $gender = $_POST['gender'];
+           $date = $_POST['date'];
+           $month = $_POST['month'];
+           $year = $_POST['year'];
+           
+           if(empty($name))
+           {
+               echo "Name is empty ";
+           
+           }
+           if(empty($uname))
+           {
+               echo "User Name is empty ";
+           
+           }
+           if($pword != $conpword)
+           {
+               echo "Your password doesn't match ";
+           
+           }
+           if(empty($date))
+           {
+               echo "Date is empty! ";
+           
+           }
+           if(empty($month))
+           {
+               echo "Month is empty! ";
+           
+           }
+           if(empty($year))
+           {
+               echo "Year is empty! ";
+           
+           }
+           else 
+           {
+               echo "Name: $name, User Name : $uname, You are : $gender, Your DOB is: $date/$month/$year";
+           }
+       }
+   }
+?>
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<p align="center">Copyright &#169; 2027</p>
+</td>
+</tr>
+</body>
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
